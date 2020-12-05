@@ -4,3 +4,5 @@
 - 19.7MB
 
 docker run -it distroless-skopeo:v0.0.1 login --tls-verify=false docker.io
+
+docker run -it distroless-skopeo:v0.0.1 inspect --tls-verify=false docker://docker.io/nginx:latest
