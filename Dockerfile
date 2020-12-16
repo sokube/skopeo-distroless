@@ -18,7 +18,7 @@ RUN CGO_ENABLED=0 GOOS=${OS} GOARCH=${ARCH} go build -a -installsuffix cgo -ldfl
 FROM scratch
 COPY --from=builder /go/bin/skopeo /go/bin/skopeo
 COPY --from=builder /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem /etc/pki/ca-trust/extracted/pem/tls-ca-bundle.pem
-COPY --from=builder --chown=1001:0 /run /run
+#COPY --from=builder --chown=1001:0 /run /run
 COPY --from=builder --chown=1001:0 /src/github.com/containers/skopeo/default-policy.json /etc/containers/policy.json
 USER 1001
 ENTRYPOINT ["/go/bin/skopeo"]
