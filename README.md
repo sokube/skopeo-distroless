@@ -1,8 +1,8 @@
 # skopeo-distroless
 - v0.0.1              
 - 06337b8f0f37
-- 19.7MB
+- 19.9MB
 
-docker run -it distroless-skopeo:v0.0.1 login --tls-verify=false docker.io
+docker run -it distroless-skopeo:v0.0.1 login docker.io
 
-docker run -it distroless-skopeo:v0.0.1 inspect --tls-verify=false docker://docker.io/nginx:latest
+docker run -it distroless-skopeo:v0.0.1 inspect docker://docker.io/nginx:latest
